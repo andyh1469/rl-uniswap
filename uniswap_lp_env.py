@@ -178,7 +178,7 @@ class UniswapLPEnv(gym.Env):
     return obs
 
 
-  def _take_action(self, action):
+  def takeAction(self, action):
     trade_type = action[0]
     tick_idx = action[1]
 
@@ -274,7 +274,7 @@ class UniswapLPEnv(gym.Env):
     return
 
 
-  def _compute_reward(self):
+  def computeReward(self):
     pre_price = self.price_history[-1]
     
     # Retrieve next hour's data
@@ -298,7 +298,7 @@ class UniswapLPEnv(gym.Env):
     return reward
   
 
-  def _next_observation(self):
+  def nextObservation(self):
     self.position_token0 = self.new_position_token0.copy()
     self.position_token1 = self.new_position_token1.copy()
     self.position_cash = self.new_position_cash
@@ -315,10 +315,10 @@ class UniswapLPEnv(gym.Env):
     done = self.current_step >= len(self.price_history_df.index) - 2
 
     # Execute one time step within the environment
-    self._take_action(action)
+    self.takeAction(action)
     self.current_step += 1
-    reward = self._compute_reward()
-    obs = self._next_observation()
+    reward = self.computeReward()
+    obs = self.nextObservation()
 
     if done:
       eth_end_price = np.array(self.price_history_df.loc[self.current_step][2:])[-1]
