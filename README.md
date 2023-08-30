@@ -1,4 +1,4 @@
-# A Reinforcement Learning Approach to Optimal Liquidity Provision in Uniswap v3
+# A Reinforcement Learning Approach to Optimal Liquidity Provision in Uniswap
 
 # Team Members:
 Andy Hsu, Akshay Sreekumar
