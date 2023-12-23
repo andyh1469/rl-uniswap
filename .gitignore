@@ -1,2 +1,5 @@
-__pycache__/
-blockchain_data/
+__MACOSX
+__pycache__
+.vscode
+blockchain_data
+results

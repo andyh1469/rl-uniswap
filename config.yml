@@ -1,0 +1,15 @@
+env_vars:
+  INITIAL_CASH: 10000
+  MIN_TICK: 191340
+  MAX_TICK: 208560
+  TICK_SPACING: 60
+  TOKEN0_DECIMALS: 18
+  TOKEN1_DECIMALS: 6
+  FEE_WEIGHT: 1000
+  DEBUG_MODE: False
+
+train_params:
+  n_nodes: 64
+  lr: 0.03
+  n_steps: 256
+  num_episodes: 5
