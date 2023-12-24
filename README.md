@@ -10,5 +10,6 @@ This project simulates a decentralized liquidity pool (Uniswap v3) in Gym by for
 First, unzip the blockchain data to get the required CSV files:
 `unzip blockchain_data.zip`
 
-Then simply run `train.py`. You can edit the input parameters in `config.yml`.\n\n
-`python train.py`
+Then simply run the training script: `python train.py`. 
+
+You can edit the input parameters in `config.yml`.
